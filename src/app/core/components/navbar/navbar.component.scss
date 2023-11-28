@@ -1,0 +1,63 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 20%;
+  margin-bottom: 6rem;
+}
+
+.venda-mais-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 1.3rem;
+  color: #080808;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.logo span {
+  font-size: 1.3rem;
+}
+
+.plus-icon,
+p {
+  font-size: 2rem;
+  color: #080808;
+}
+
+.planos-btn {
+  padding: 10px 20px;
+  background-color: #080808;
+  border-radius: 999px;
+}
+
+.planos-btn a {
+  color: #fff;
+}
+
+.planos-btn:hover a {
+  color: #fabb02;
+}

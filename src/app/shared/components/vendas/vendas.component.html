@@ -1,0 +1,16 @@
+<div class="center">
+  <h1>Veja todas suas análises de vendas todas em um só lugar!</h1>
+</div>
+<div class="card">
+  <h2>Vendas totais</h2>
+  <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+</div>
+<div class="card">
+  <h2>Vendas por período</h2>
+  <div class="grafico">
+    <p-chart type="bar" [data]="data" [options]="options"></p-chart>
+  </div>
+  <div class="grafico">
+    <p-chart type="bar" [data]="data" [options]="horizontalOptions"></p-chart>
+  </div>
+</div>

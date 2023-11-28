@@ -1,0 +1,52 @@
+<div class="title">
+  <h1>Meus produtos</h1>
+</div>
+<p-dataView #dv [value]="products" [rows]="5" [paginator]="true">
+  <ng-template let-product pTemplate="listItem">
+    <div class="col-12">
+      <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+        <img
+          class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round"
+          [src]="product.imagem"
+          [alt]="product.nome"
+        />
+        <div
+          class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4"
+        >
+          <div
+            class="flex flex-column align-items-center sm:align-items-start gap-3"
+          >
+            <div class="text-2xl font-bold text-900">{{ product.nome }}</div>
+
+            <div class="flex align-items-center gap-3">
+              <span class="flex align-items-center gap-2">
+                <fa-icon [icon]="faTag"></fa-icon>
+                <span class="font-semibold">{{ product.categoria }}</span>
+              </span>
+            </div>
+            <p-tag
+              [value]="product.disponibilidadeDeEstoque"
+              [severity]="getSeverity(product)!"
+              [style]="{ padding: '3px' }"
+            ></p-tag>
+            <div class="marketplaces">
+              <div
+                class="marketplace"
+                *ngFor="let marketplace of product.marketplaces"
+              >
+                <img [src]="getMarketPlacesImage(marketplace)" alt="" />
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2"
+          >
+            <span class="text-2xl font-semibold">{{
+              "R$" + product.preco
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>

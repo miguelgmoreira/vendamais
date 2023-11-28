@@ -1,0 +1,18 @@
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.marketplaces {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.marketplace img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}

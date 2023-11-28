@@ -1,0 +1,47 @@
+<div class="planos">
+  <p-card
+    header="Starter"
+    [style]="{
+      width: '500px',
+      padding: '20px',
+      
+    }"
+  >
+    <ng-template pTemplate="header">
+      <img
+        alt="Card"
+        src="../../../../assets/images/person-giving-a-financial-presentation.png"
+        [style]="{ height: '250px', objectFit: 'cover' }"
+      />
+    </ng-template>
+    <ul class="items">
+      <li *ngFor="let option of options.starter">{{ option }}</li>
+    </ul>
+
+    <p class="price">
+      <span class="last-price">R$49</span>
+      <span class="cifrao">R$ </span>39,99<span class="mensal"> mensal</span>
+    </p>
+    <button class="current-signature">Plano atual</button>
+  </p-card>
+  <p-card header="Plus" [style]="{ width: '500px', padding: '20px' }">
+    <ng-template pTemplate="header">
+      <img
+        alt="Card"
+        src="../../../../assets/images/person-evaluating-finances.png"
+        [style]="{ height: '250px', objectFit: 'cover' }"
+      />
+    </ng-template>
+    <span class="popular">
+      Mais popular <fa-icon [icon]="faStar"></fa-icon
+    ></span>
+    <ul class="items">
+      <li *ngFor="let option of options.plus">{{ option }}</li>
+    </ul>
+    <p class="price">
+      <span class="last-price">R$99</span>
+      <span class="cifrao">R$ </span>79,99<span class="mensal"> mensal</span>
+    </p>
+    <button class="trial-btn">Experimente grátis</button>
+  </p-card>
+</div>

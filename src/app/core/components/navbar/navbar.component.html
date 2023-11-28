@@ -1,0 +1,25 @@
+<header>
+  <div class="logo">
+    <img
+      src="../../../../assets/images/kisspng-computer-icons-marketing-business-advertising-5afdca2da16d88.8334882515265818056612-removebg-preview(1).png"
+      alt=""
+      class="venda-mais-logo"
+    />
+    <div class="logo-name">
+      <p>Venda</p>
+      <fa-icon [icon]="faPlus" class="plus-icon"></fa-icon>
+    </div>
+  </div>
+  <nav>
+    <div *ngFor="let route of routes">
+      <div class="planos-btn" *ngIf="route.nome === 'Planos'">
+        <a routerLink="{{ route.path }}">{{ route.nome }}</a>
+      </div>
+      <a routerLink="{{ route.path }}" *ngIf="route.nome !== 'Planos'">{{
+        route.nome
+      }}</a>
+    </div>
+  </nav>
+</header>
+
+
